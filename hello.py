@@ -54,7 +54,6 @@ def get_tag(tag_str: str) -> TagOut:
     return tag
 
 
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("hello:app", reload=True)
