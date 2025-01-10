@@ -5,3 +5,6 @@ class Explorer(BaseModel):
     name: str
     country: str
     description: str
+
+
+OptExplorer = Explorer | None

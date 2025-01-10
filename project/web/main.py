@@ -20,4 +20,4 @@ def echo(thing):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run('main:app', reload=True)
+    uvicorn.run('main:app', reload=True, port=8002)
