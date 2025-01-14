@@ -1,8 +1,4 @@
-from fastapi import Depends
-
 from exceptions import Missing, Duplicate
-from model.explorer import Explorer
-from model.tools import Pagination, Ordering, sort, paginate
 from model.user import User
 
 fakes = [
