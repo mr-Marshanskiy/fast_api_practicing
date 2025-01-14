@@ -18,6 +18,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def verify_password(plain: str, hash: str) -> bool:
+    print(plain, hash)
     return pwd_context.verify(plain, hash)
 
 
@@ -79,6 +80,7 @@ def get_one(name) -> User:
 
 
 def create(user: User) -> User:
+    user.hash = get_hash(user.hash)
     return data.create(user)
 
 

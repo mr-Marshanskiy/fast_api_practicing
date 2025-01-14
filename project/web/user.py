@@ -37,7 +37,7 @@ async def create_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
         unauthorized()
     expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = service.create_access_token(
-        data={'sub': user.username}, expires=expires
+        data={'sub': user.name}, expires=expires
     )
     return {'access_token': access_token, 'token_type': 'bearer'}
 
